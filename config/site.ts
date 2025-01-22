@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "MK Portfolio",
+  description: "Welcome to Mayank Kashyap Portfolio",
   navItems: [
     {
       label: "Home",
@@ -60,10 +60,9 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
+    github: "https://github.com/mayankk234",
+    twitter: "https://twitter.com/mayank_234",
     docs: "https://heroui.com",
     discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
   },
 };

@@ -14,7 +14,7 @@ export default function IndexPage() {
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block max-w-xl text-center justify-center">
           <span className={title()}>Work&nbsp;</span>
-          <span className={title({ color: "violet" })}>In Progress&nbsp;</span>
+          <span className={title({ color: "cyan" })}>In Progress&nbsp;</span>
           <br />
           <span className={title()}>
             of the best portfolio you've ever seen.
