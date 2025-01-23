@@ -18,10 +18,10 @@ export default function IndexPage() {
           <div>
             <span className={title()}>Hey!, This is me&nbsp;</span>
             <span className={title({ color: "cyan" })}>
-              Mayank Kashyap&nbsp;
+              Mayank Kashyap,&nbsp;
             </span>
             <br />
-            <span className={title()}>Welcome to me digital portfolio.</span>
+            <span className={title()}>a Full Stack Developer</span>
           </div>
           <div className="flex flex-col gap-4 md:gap-8 ml-0 md:ml-8">
             <Image
@@ -31,6 +31,42 @@ export default function IndexPage() {
               src={profilePicture.src}
               width={540}
             />
+          </div>
+        </div>
+      </section>
+
+      <div>
+        <div className="gradient-line"></div>
+      </div>
+
+      <style jsx>{`
+        .gradient-line {
+          height: 4px;
+          width: 100%;
+          border-radius: 10px;
+          background: linear-gradient(90deg,rgb(4, 201, 235), transparent);
+          background-size: 200% 100%;
+          animation: gradient-animation 3s infinite linear;
+        }
+
+        @keyframes gradient-animation {
+          0% {
+        background-position: 0% 0%;
+          }
+          50% {
+        background-position: -100% 0%;
+          }
+          100% {
+        background-position: 0% 0%;
+          }
+        }
+      `}</style>
+
+      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+        <div className="flex flex-col md:flex-row items-center justify-center max-w-xl gap-4">
+          <div>
+            <span className={title()}>About&nbsp;</span>
+            <span className={title({color: "cyan"})}>Me&nbsp;</span>
           </div>
         </div>
       </section>
