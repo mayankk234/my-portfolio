@@ -7,32 +7,31 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
+import { Image } from "@heroui/react";
+import profilePicture from "../public/images/profile_pic.png";
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-xl text-center justify-center">
-          <span className={title()}>Work&nbsp;</span>
-          <span className={title({ color: "cyan" })}>In Progress&nbsp;</span>
-          <br />
-          <span className={title()}>
-            of the best portfolio you've ever seen.
-          </span>
-          <div className={subtitle({ class: "mt-4" })}>
-            Using Beautiful, fast and modern React UI library.
+        <div className="flex flex-col md:flex-row items-center justify-center max-w-xl gap-4">
+          <div>
+            <span className={title()}>Hey!, This is me&nbsp;</span>
+            <span className={title({ color: "cyan" })}>
+              Mayank Kashyap&nbsp;
+            </span>
+            <br />
+            <span className={title()}>Welcome to me digital portfolio.</span>
           </div>
-        </div>
-
-        <div className="flex gap-3">
-          <Link
-            isExternal
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={siteConfig.links.github}
-          >
-            <GithubIcon size={20} />
-            GitHub
-          </Link>
+          <div className="flex flex-col gap-4 md:gap-8 ml-0 md:ml-8">
+            <Image
+              isBlurred
+              alt="Mayank Kashyap profile picture"
+              className="md:m-5 lg:m-5 xl:m-5"
+              src={profilePicture.src}
+              width={540}
+            />
+          </div>
         </div>
       </section>
     </DefaultLayout>

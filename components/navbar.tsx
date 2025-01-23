@@ -57,7 +57,7 @@ export const Navbar = () => {
             <p className="font-bold text-inherit">Mayank Kashyap</p>
           </NextLink>
         </NavbarBrand>
-        {/* <div className="hidden lg:flex gap-4 justify-start ml-2">
+        <div className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -72,7 +72,7 @@ export const Navbar = () => {
               </NextLink>
             </NavbarItem>
           ))}
-        </div> */}
+        </div>
       </NavbarContent>
 
       <NavbarContent
@@ -98,8 +98,7 @@ export const Navbar = () => {
         <NavbarMenuToggle />
       </NavbarContent>
 
-      {/* <NavbarMenu>
-        {searchInput}
+      <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
@@ -119,7 +118,7 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
         </div>
-      </NavbarMenu> */}
+      </NavbarMenu>
     </HeroUINavbar>
   );
 };
