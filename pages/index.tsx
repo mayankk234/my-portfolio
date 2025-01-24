@@ -7,9 +7,10 @@ import Card from "@/components/card";
 import Loader from "@/components/loader";
 import ExpCard from "@/components/expCard";
 import { useEffect, useState } from "react";
+import BarsLoader from "@/components/loadbars";
 
 export default function IndexPage() {
-  
+
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -106,6 +107,10 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
+
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "-50px" }}>
+        <BarsLoader />
+      </div>
     </DefaultLayout>
   );
 }
