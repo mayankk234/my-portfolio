@@ -81,14 +81,19 @@ const StyledWrapper = styled.div`
     background: rgb(38, 38, 38);
     box-shadow: 1px 1px 20px rgb(4, 201, 235);
     border-radius: 10px;
-    margin: 30px;
+    margin: 15px;
+    
+    @media (max-width: 768px) {
+      width: 260px;
+      margin: 10px;
+    }
+    
+    @media (max-width: 480px) {
+      width: 240px;
+      margin: 8px;
+    }
   }
-
-  .card:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-
+  
   .imge {
     height: 100px;
     background-color: rgb(4, 201, 235);
@@ -101,6 +106,11 @@ const StyledWrapper = styled.div`
     width: 80px;
     height: 80px;
     border-radius: 10px;
+    
+    @media (max-width: 480px) {
+      width: 70px;
+      height: 70px;
+    }
   }
 
   .imge .UserName {
@@ -114,6 +124,11 @@ const StyledWrapper = styled.div`
     font-size: 15px;
     font-weight: bold;
     transform: translateX(100px) translateY(-80px);
+    
+    @media (max-width: 480px) {
+      transform: translateX(90px) translateY(-70px);
+      font-size: 13px;
+    }
   }
 
   .imge .Id {
@@ -127,6 +142,11 @@ const StyledWrapper = styled.div`
     font-size: 15px;
     font-weight: bold;
     transform: translateX(100px) translateY(-74px);
+    
+    @media (max-width: 480px) {
+      transform: translateX(90px) translateY(-64px);
+      font-size: 13px;
+    }
   }
 
   .imge .Id2 {
@@ -140,6 +160,11 @@ const StyledWrapper = styled.div`
     font-size: 13px;
     font-weight: bold;
     transform: translateX(100px) translateY(-66px);
+    
+    @media (max-width: 480px) {
+      transform: translateX(90px) translateY(-56px);
+      font-size: 11px;
+    }
   }
 `;
 

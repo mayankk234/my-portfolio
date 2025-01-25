@@ -13,21 +13,19 @@ export default function IndexPage() {
 
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-xl gap-4">
-          <div>
+      <section className="flex flex-col items-center justify-center gap-4 py-4 md:py-8 px-4 md:px-6">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl gap-4 md:gap-8">
+          <div className="text-center md:text-left w-full md:w-1/2">
             <span className={title()}>Hey!, This is me&nbsp;</span>
-            <span className={title({ color: "cyan" })}>
-              Mayank Kashyap,&nbsp;
-            </span>
-            <br />
+            <span className={title({ color: "cyan" })}>Mayank Kashyap,&nbsp;</span>
+            <br className="hidden md:block" />
             <span className={title()}>a Full Stack Developer</span>
           </div>
-          <div className="flex flex-col gap-4 md:gap-8 ml-0 md:ml-8">
+          <div className="w-full md:w-1/2 flex justify-center">
             <Image
               isBlurred
               alt="Mayank Kashyap profile picture"
-              className="md:m-5 lg:m-5 xl:m-5"
+              className="w-full max-w-[200px] md:max-w-[290px]"
               src={profilePicture.src}
               width={540}
             />
@@ -75,18 +73,20 @@ export default function IndexPage() {
         }
       `}</style>
 
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-xl gap-4">
-          <div>
+      <section className="flex flex-col items-center justify-center gap-4 py-4 md:py-8 px-4 md:px-6">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl gap-4 md:gap-8">
+          <div className="text-center md:text-left">
             <span className={title()}>About&nbsp;</span>
             <span className={title({ color: "cyan" })}>Me&nbsp;</span>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row">
-          <div className="avatar-container">
-            <Image src={avatar.src} alt="avatar" width={250} />
+        <div className="flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl">
+          <div className="avatar-container w-full md:w-auto flex justify-center">
+            <Image src={avatar.src} alt="avatar" className="w-[200px] md:w-[250px]" width={250} />
           </div>
-          <Card />
+          <div className="w-full md:w-auto">
+            <Card />
+          </div>
         </div>
       </section>
 
@@ -94,15 +94,15 @@ export default function IndexPage() {
         <Loader />
       </div>
 
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="flex">
-          <div>
+      <section className="flex flex-col items-center justify-center gap-4 py-4 md:py-8 px-4 md:px-6">
+        <div className="flex justify-center w-full">
+          <div className="text-center">
             <span className={title()}>Work Experience &&nbsp;</span>
             <span className={title({ color: "cyan" })}>Internships&nbsp;</span>
           </div>
         </div>
-        <div>
-          <div>
+        <div className="w-full overflow-x-auto">
+          <div className="flex flex-col md:flex-row justify-center min-w-max md:min-w-0">
             <ExpCard />
           </div>
         </div>
