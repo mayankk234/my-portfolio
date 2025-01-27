@@ -94,6 +94,11 @@ const StyledWrapper = styled.div`
     }
   }
   
+  .card:hover {
+    transform: scale(1.10);
+    transition: transform 0.3s ease-in-out;
+  }
+  
   .imge {
     height: 100px;
     background-color: rgb(4, 201, 235);

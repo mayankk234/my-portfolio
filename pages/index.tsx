@@ -32,43 +32,64 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
-
+    
       <div>
         <div className="gradient-line"></div>
       </div>
 
       <style jsx>{`
         .gradient-line {
-          height: 4px;
+          height: 2px;
           width: 100%;
-          border-radius: 10px;
-          background: linear-gradient(90deg, rgb(4, 201, 235), transparent);
-          background-size: 200% 100%;
-          animation: gradient-animation 3s infinite linear;
+          position: relative;
+          background: rgb(4, 201, 235);
+          overflow: hidden;
+          animation: heartbeat 1.5s ease-in-out infinite;
         }
 
-        @keyframes gradient-animation {
+        .gradient-line::before {
+          content: '';
+          position: absolute;
+          left: -50%;
+          width: 50%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgb(4, 201, 235));
+          animation: slide 2s linear infinite;
+        }
+
+        @keyframes heartbeat {
           0% {
-            background-position: 0% 0%;
+            transform: scale(1);
+            opacity: 0.8;
+          }
+          25% {
+            transform: scale(1.1);
+            opacity: 1;
+          }
+          35% {
+            transform: scale(1);
+            opacity: 0.8;
           }
           50% {
-            background-position: -100% 0%;
+            transform: scale(1.1);
+            opacity: 1;
+          }
+          60% {
+            transform: scale(1);
+            opacity: 0.8;
           }
           100% {
-            background-position: 0% 0%;
+            transform: scale(1);
+            opacity: 0.8;
           }
         }
 
-        .avatar-container {
-          animation: move-animation 1s infinite alternate;
-        }
-
-        @keyframes move-animation {
+        @keyframes slide {
           0% {
-            transform: translateX(0);
+            left: -50%;
           }
           100% {
-            transform: translateX(10px);
+            left: 100%;
           }
         }
       `}</style>
@@ -81,7 +102,7 @@ export default function IndexPage() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl">
-          <div className="avatar-container w-full md:w-auto flex justify-center">
+          <div className="avatar-container w-full md:w-auto flex justify-center avatar-sway">
             <Image src={avatar.src} alt="avatar" className="w-[200px] md:w-[250px]" width={250} />
           </div>
           <div className="w-full md:w-auto">
@@ -111,6 +132,65 @@ export default function IndexPage() {
       <div style={{ display: "flex", justifyContent: "center", marginTop: "-50px" }}>
         <BarsLoader />
       </div>
+
+      <section className="flex flex-col items-center justify-center gap-4 py-4 md:py-8 px-4 md:px-6">
+        <div className="flex justify-center w-full">
+          <div className="text-center">
+            <span>
+                <span className="skills-title">
+                <span className="skill-letter">S</span>
+                <span className="skill-letter">k</span>
+                <span className="skill-letter">i</span>
+                <span className="skill-letter">l</span>
+                <span className="skill-letter">l</span>
+                <span className="skill-letter">s</span>
+                </span>
+            </span>
+          </div>
+        </div>
+      </section>
+      <style jsx>{`
+        .skill-letter {
+          display: inline-block;
+          animation: letterAnimation 3.6s infinite;
+          font-size: 2.5rem;
+          font-weight: bold;
+        }
+        
+        .skill-letter:nth-child(1) { animation-delay: 0s; }
+        .skill-letter:nth-child(2) { animation-delay: 0.6s; }
+        .skill-letter:nth-child(3) { animation-delay: 1.2s; }
+        .skill-letter:nth-child(4) { animation-delay: 1.8s; }
+        .skill-letter:nth-child(5) { animation-delay: 2.4s; }
+        .skill-letter:nth-child(6) { animation-delay: 3s; }
+        
+        @keyframes letterAnimation {
+          0%, 15% {
+            color: inherit;
+            transform: scale(1);
+          }
+          7.5% {
+            color: rgb(4, 201, 235);
+            transform: scale(1.2);
+          }
+          15%, 100% {
+            color: inherit;
+            transform: scale(1);
+          }
+        }
+        .avatar-sway {
+          animation: sway 3s ease-in-out infinite;
+        }
+
+        @keyframes sway {
+          0%, 100% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(15px);
+          }
+        }
+      `}</style>
     </DefaultLayout>
   );
 }
