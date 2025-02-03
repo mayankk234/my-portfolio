@@ -8,6 +8,27 @@ import Loader from "@/components/loader";
 import ExpCard from "@/components/expCard";
 import { useEffect, useState } from "react";
 import BarsLoader from "@/components/loadbars";
+import { IoLogoJavascript } from "react-icons/io5";
+import { IoLogoHtml5 } from "react-icons/io";
+import { IoLogoCss3 } from "react-icons/io5";
+import { FaBootstrap } from "react-icons/fa6";
+import { SiTypescript } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { FaNode } from "react-icons/fa6";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiExpress } from "react-icons/si";
+import { FaJava } from "react-icons/fa6";
+import { SiPhp } from "react-icons/si";
+import { FaLaravel } from "react-icons/fa6";
+import { SiMysql } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { RiFirebaseFill } from "react-icons/ri";
+import { SiMapbox } from "react-icons/si";
+import { BsStripe } from "react-icons/bs";
+import { TbBrandReactNative } from "react-icons/tb";
+import { SiExpo } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
+
 
 export default function IndexPage() {
 
@@ -38,6 +59,29 @@ export default function IndexPage() {
       </div>
 
       <style jsx>{`
+        .skill-icon-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 1.5rem;
+          background: rgba(4, 201, 235, 0.1);
+          border-radius: 1rem;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+        }
+
+        .skill-icon-container:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 12px rgba(4, 201, 235, 0.2);
+        }
+
+        .skill-label {
+          margin-top: 0.75rem;
+          font-size: 1rem;
+          font-weight: 500;
+          color: inherit;
+        }
         .gradient-line {
           height: 2px;
           width: 100%;
@@ -148,8 +192,115 @@ export default function IndexPage() {
             </span>
           </div>
         </div>
+        <div className="w-full overflow-x-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-4 max-w-4xl mx-auto">
+            <div className="skill-icon-container">
+              <i className="fab fa-html5 text-6xl" style={{ color: '#E34F26' }}><IoLogoHtml5 /></i>
+              <span className="skill-label">HTML5</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-css3-alt text-6xl" style={{ color: '#1572B6' }}><IoLogoCss3 /></i>
+              <span className="skill-label">CSS</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-bootstrap text-6xl" style={{ color: '#7952B3' }}><FaBootstrap /></i>
+              <span className="skill-label">Bootstrap</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-js text-6xl" style={{ color: '#F7DF1E' }}><IoLogoJavascript /></i>
+              <span className="skill-label">JavaScript</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><SiTypescript /></i>
+              <span className="skill-label">TypeScript</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><FaReact /></i>
+              <span className="skill-label">React</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><FaNode /></i>
+              <span className="skill-label">Node.js</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><RiNextjsFill/></i>
+              <span className="skill-label">Next.js</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><SiExpress /></i>
+              <span className="skill-label">Express.js</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><FaJava /></i>
+              <span className="skill-label">Java</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><SiPhp /></i>
+              <span className="skill-label">Php</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><FaLaravel /></i>
+              <span className="skill-label">Laravel</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><SiMysql /></i>
+              <span className="skill-label">Sql</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><SiMongodb /></i>
+              <span className="skill-label">MongoDB</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><RiFirebaseFill /></i>
+              <span className="skill-label">Firebase</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><SiMapbox /></i>
+              <span className="skill-label">Mapbox</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><BsStripe /></i>
+              <span className="skill-label">Stripe</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><TbBrandReactNative /></i>
+              <span className="skill-label">ReactNative</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><SiExpo /></i>
+              <span className="skill-label">Expo</span>
+            </div>
+            <div className="skill-icon-container">
+              <i className="fab fa-typescript text-6xl" style={{ color: '#3178C6' }}><FaGitAlt /></i>
+              <span className="skill-label">Git</span>
+            </div>
+          </div>
+        </div>
       </section>
       <style jsx>{`
+        .skill-icon-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 1.5rem;
+          background: rgba(4, 201, 235, 0.1);
+          border-radius: 1rem;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+        }
+
+        .skill-icon-container:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 12px rgba(4, 201, 235, 0.2);
+        }
+
+        .skill-label {
+          margin-top: 0.75rem;
+          font-size: 1rem;
+          font-weight: 500;
+          color: inherit;
+        }
         .skill-letter {
           display: inline-block;
           animation: letterAnimation 3.6s infinite;
